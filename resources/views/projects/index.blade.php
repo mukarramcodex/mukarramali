@@ -1,3 +1,8 @@
-<div>
-    <!-- I begin to speak only when I am certain what I will say is not better left unsaid. - Cato the Younger -->
-</div>
+<x-app-layout>
+    <section class="py-12">
+        <h1 class="text-3xl font-bold text-center mb-6">
+            My Projects
+        </h1>
+        @include('components.projects-preview')
+    </section>
+</x-app-layout>
