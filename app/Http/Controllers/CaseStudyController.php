@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Project;
+use App\Models\CaseStudy;
 use Illuminate\Http\Request;
 
 class CaseStudyController extends Controller
 {
-    public function index() 
+    public function index()
     {
-        $project = Project::latest()->get();
-        return view('projects.index', compact('projects'));
+        $studies = CaseStudy::latest()->get();
+        return view('case-studies.index', compact('studies'));
     }
 
     public function show($slug)
     {
-        $project = Project::where('slug', $slug)->firstOrFail();
-        return view('projects.show', compact('project'));
+        $study = CaseStudy::where('slug', $slug)->firstOrFail();
+        return view('case-studies.show', compact('study'));
     }
 }
