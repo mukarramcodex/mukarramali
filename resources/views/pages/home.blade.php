@@ -8,7 +8,5 @@
   </section>
 
     <x-about />
-    <x-projects-preview />
-    <x-case-studies-preview />
     <x-contact-cta />
 </x-app-layout>

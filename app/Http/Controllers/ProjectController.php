@@ -9,13 +9,13 @@ class ProjectController extends Controller
 {
     public function index() 
     {
-        $project = Project::latest()->get();
+        $projects = Project::latest()->get();
         return view('projects.index', compact('projects'));
     }
 
     public function show($slug)
     {
         $project = Project::where('slug', $slug)->firstOrFail();
-        return view('projects.show', compact('project'));
+        return view('projects.show', compact('projects'));
     }
 }
