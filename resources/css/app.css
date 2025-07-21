@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body.home-page {
+  background: var(--tc-bg-5);
+  font-family: "DM Mono", monospace;
+}
+body.home-page a:hover {
+  color: var(--tc-theme-primary-2);
+  text-decoration: none;
+}
+body.home-page h1,
+body.home-page h2,
+body.home-page h3,
+body.home-page h4,
+body.home-page h5,
+body.home-page h6 {
+  font-family: "DM Mono", monospace;
+  font-weight: var(--tc-fw-medium);
+}
+body.home-page p {
+  font-family: "DM Mono", monospace;
+  font-weight: var(--tc-fw-regular);
+}
+/* .section-skills-2 .carouselTicker__item .tool-tip::before {
+  content: url(../imgs/home-page-2/template/down.svg);
+  position: absolute;
+  bottom: -14px;
+  left: 30%;
+} */
+[data-bs-theme=dark] body.home-page {
+  background: var(--tc-bg-5);
+}
