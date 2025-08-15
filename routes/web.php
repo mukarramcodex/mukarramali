@@ -7,12 +7,8 @@ use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-// Route::get('/pages/home', function () {
-//     return view('pages.home');
-// })->name('pages.home');
+    return view('home');
+})->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -24,8 +20,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Route::get('/pages/home', [PageController::class, 'home'])->name('home');
-Route::get('/pages/home', function () { return view('pages.home');})->name('pages.home');
 Route::get('/projects', [ProjectController::class, 'index'])->name('projects.index');
 Route::get('/projects/{slug}', [ProjectController::class, 'show'])->name('projects.show');
 Route::get('/case-studies', [CaseStudyController::class, 'index'])->name('case-studies.index');
